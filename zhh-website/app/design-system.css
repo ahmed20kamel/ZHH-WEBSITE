@@ -1,0 +1,554 @@
+/* ============================================
+   ZHH GROUP HOLDING - UNIFIED DESIGN SYSTEM
+   ============================================ */
+
+/* ============================================
+   1. GLOBAL LAYOUT SYSTEM
+   ============================================ */
+
+:root {
+  /* Container System */
+  --container-max-width: 1320px;
+  --container-padding-mobile: 20px;
+  --container-padding-tablet: 40px;
+  --container-padding-desktop: 60px;
+  
+  /* Section Spacing System - Reduced by 15% */
+  --section-spacing-top: clamp(77px, 9vw, 102px);
+  --section-spacing-bottom: clamp(77px, 9vw, 102px);
+  --section-spacing-mobile: clamp(64px, 7.7vw, 77px);
+  
+  /* Content Spacing - Reduced by 15% */
+  --content-spacing-xs: 7px;
+  --content-spacing-sm: 14px;
+  --content-spacing-md: 20px;
+  --content-spacing-lg: 34px;
+  --content-spacing-xl: 51px;
+  
+  /* Title to Content Spacing - Reduced by 15% */
+  --title-content-gap: clamp(26px, 3vw, 31px);
+  --title-content-gap-mobile: clamp(17px, 2.1vw, 20px);
+}
+
+/* Global Container */
+.container-unified {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Large Desktop (1440px+) - Prevent excessive stretching */
+@media (min-width: 1440px) {
+  .container-unified {
+    max-width: 1320px;
+    padding-left: clamp(40px, 5vw, 80px);
+    padding-right: clamp(40px, 5vw, 80px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container-unified {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-unified {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .container-unified {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Section Wrapper */
+.section-unified {
+  padding-top: var(--section-spacing-mobile);
+  padding-bottom: var(--section-spacing-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-unified {
+    padding-top: var(--section-spacing-top);
+    padding-bottom: var(--section-spacing-bottom);
+  }
+}
+
+/* ============================================
+   2. TYPOGRAPHY SYSTEM
+   ============================================ */
+
+:root {
+  /* Font Families */
+  --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Playfair Display', 'Montserrat', serif;
+  --font-arabic: 'Cairo', 'Almarai', sans-serif;
+  
+  /* Heading Sizes - Reduced by 15% */
+  --h1-size: clamp(32px, 4.7vw, 62px);
+  --h1-line-height: 1.15;
+  --h1-weight: 700;
+  --h1-margin-bottom: clamp(22px, 2.4vw, 29px);
+  
+  --h2-size: clamp(30px, 3.9vw, 48px);
+  --h2-line-height: 1.2;
+  --h2-weight: 700;
+  --h2-margin-bottom: clamp(19px, 2vw, 26px);
+  
+  --h3-size: clamp(22px, 2.9vw, 31px);
+  --h3-line-height: 1.3;
+  --h3-weight: 600;
+  --h3-margin-bottom: clamp(16px, 1.6vw, 19px);
+  
+  --h4-size: clamp(18px, 2.4vw, 24px);
+  --h4-line-height: 1.4;
+  --h4-weight: 600;
+  --h4-margin-bottom: clamp(14px, 1.2vw, 16px);
+  
+  /* Body Text - Reduced by 15% */
+  --body-large-size: clamp(15px, 1.7vw, 16px);
+  --body-large-line-height: 1.7;
+  --body-regular-size: clamp(14px, 1.5vw, 15px);
+  --body-regular-line-height: 1.7;
+  --body-small-size: clamp(12px, 1.4vw, 14px);
+  --body-small-line-height: 1.6;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.5px;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.5px;
+}
+
+/* Unified Headings */
+.h1-unified {
+  font-family: var(--font-heading);
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
+  font-weight: var(--h1-weight);
+  margin-bottom: var(--h1-margin-bottom);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.h2-unified {
+  font-family: var(--font-heading);
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  font-weight: var(--h2-weight);
+  margin-bottom: var(--h2-margin-bottom);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.h3-unified {
+  font-family: var(--font-primary);
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  font-weight: var(--h3-weight);
+  margin-bottom: var(--h3-margin-bottom);
+}
+
+.h4-unified {
+  font-family: var(--font-primary);
+  font-size: var(--h4-size);
+  line-height: var(--h4-line-height);
+  font-weight: var(--h4-weight);
+  margin-bottom: var(--h4-margin-bottom);
+}
+
+/* Unified Body Text */
+.body-large-unified {
+  font-size: var(--body-large-size);
+  line-height: var(--body-large-line-height);
+  font-weight: 400;
+}
+
+.body-regular-unified {
+  font-size: var(--body-regular-size);
+  line-height: var(--body-regular-line-height);
+  font-weight: 400;
+}
+
+.body-small-unified {
+  font-size: var(--body-small-size);
+  line-height: var(--body-small-line-height);
+  font-weight: 400;
+}
+
+/* Section Title Wrapper */
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: var(--title-content-gap-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-title-wrapper {
+    margin-bottom: var(--title-content-gap);
+  }
+}
+
+.section-title-wrapper h2 {
+  margin-bottom: var(--content-spacing-md);
+}
+
+.section-title-wrapper p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   3. COLOR SYSTEM
+   ============================================ */
+
+:root {
+  /* ZHH Brand Colors */
+  --color-primary-dark: #032D46;
+  --color-primary-gray: #435A66;
+  --color-primary-teal: #01B2B2;
+  --color-primary-light-teal: #B0E0E2;
+  --color-off-white: #F9F9F9;
+  
+  /* Accent Colors */
+  --color-gold: #D4AF37;
+  --color-gold-dark: #B7950B;
+  --color-gold-light: #F4D03F;
+  
+  /* Text Colors */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A4A;
+  --color-text-tertiary: #666666;
+  --color-text-light: #999999;
+  --color-text-white: #FFFFFF;
+  
+  /* Background Colors */
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #F5F5F5;
+  --color-bg-off-white: #F9F9F9;
+  --color-bg-dark: #032D46;
+  
+  /* Border Colors */
+  --color-border-light: #E0E0E0;
+  --color-border-medium: #D7D8DA;
+  --color-border-dark: #CCCCCC;
+}
+
+/* Text Color Classes */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-tertiary { color: var(--color-text-tertiary); }
+.text-teal { color: var(--color-primary-teal); }
+.text-gold { color: var(--color-gold); }
+
+/* Background Color Classes */
+.bg-unified-white { background-color: var(--color-bg-white); }
+.bg-unified-light { background-color: var(--color-bg-light); }
+.bg-unified-off-white { background-color: var(--color-bg-off-white); }
+.bg-unified-dark { background-color: var(--color-bg-dark); }
+
+/* ============================================
+   4. CARD SYSTEM
+   ============================================ */
+
+:root {
+  /* Card Properties - Reduced by 15% */
+  --card-padding: 27px;
+  --card-padding-mobile: 20px;
+  --card-border-radius: 12px;
+  --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --card-border: 1px solid var(--color-border-light);
+  --card-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-unified {
+  background: var(--color-bg-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding-mobile);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: var(--card-transition);
+}
+
+@media (min-width: 768px) {
+  .card-unified {
+    padding: var(--card-padding);
+  }
+}
+
+.card-unified:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Card with Image */
+.card-image-wrapper {
+  width: 100%;
+  height: 240px;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin-bottom: var(--content-spacing-md);
+  background: var(--color-bg-light);
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   5. IMAGE + TEXT LAYOUT SYSTEM
+   ============================================ */
+
+.image-text-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--content-spacing-lg);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .image-text-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--content-spacing-xl);
+  }
+}
+
+.image-text-layout.reverse {
+  direction: rtl;
+}
+
+.image-text-layout.reverse > * {
+  direction: ltr;
+}
+
+.image-text-layout .image-wrapper {
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.image-text-layout .image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.image-text-layout .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-spacing-md);
+}
+
+/* ============================================
+   6. BUTTON SYSTEM
+   ============================================ */
+
+:root {
+  --button-padding-y: 12px;
+  --button-padding-x: 24px;
+  --button-border-radius: 6px;
+  --button-font-size: 14px;
+  --button-font-weight: 600;
+  --button-transition: all 0.25s ease-in-out;
+}
+
+.btn-primary-unified {
+  display: inline-block;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  background-color: var(--color-gold);
+  color: var(--color-text-white);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  transition: var(--button-transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-unified:hover {
+  background-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary-unified {
+  display: inline-block;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  background-color: transparent;
+  color: var(--color-primary-teal);
+  border: 2px solid var(--color-primary-teal);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  transition: var(--button-transition);
+  cursor: pointer;
+}
+
+.btn-secondary-unified:hover {
+  background-color: var(--color-primary-teal);
+  color: var(--color-text-white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   7. FEATURE LIST SYSTEM
+   ============================================ */
+
+.feature-list-unified {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--content-spacing-sm);
+}
+
+.feature-list-unified li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--content-spacing-sm);
+}
+
+.feature-list-unified li::before {
+  content: '✓';
+  color: var(--color-primary-teal);
+  font-weight: 600;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============================================
+   8. RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Large Desktop (1440px+) - Prevent excessive stretching */
+@media (min-width: 1440px) {
+  .container-unified,
+  .container-custom {
+    max-width: 1320px;
+  }
+  
+  /* Limit grid items width */
+  .grid > * {
+    max-width: 100%;
+  }
+  
+  /* Ensure images don't stretch */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container-unified,
+  .container-custom {
+    max-width: 1320px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container-unified,
+  .container-custom {
+    max-width: 100%;
+    padding-left: clamp(24px, 3vw, 40px);
+    padding-right: clamp(24px, 3vw, 40px);
+  }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .section-unified {
+    padding-top: var(--section-spacing-mobile);
+    padding-bottom: var(--section-spacing-mobile);
+  }
+  
+  .card-unified {
+    padding: var(--card-padding-mobile);
+  }
+  
+  .section-title-wrapper {
+    margin-bottom: var(--title-content-gap-mobile);
+  }
+  
+  .container-unified,
+  .container-custom {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+}
+
+/* ============================================
+   9. ANIMATION SYSTEM
+   ============================================ */
+
+:root {
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.5s;
+  --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-up {
+  animation: fadeInUp var(--animation-duration-slow) var(--animation-ease);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   10. UTILITY CLASSES
+   ============================================ */
+
+.text-center-unified {
+  text-align: center;
+}
+
+.mb-section {
+  margin-bottom: var(--title-content-gap);
+}
+
+.mb-content {
+  margin-bottom: var(--content-spacing-md);
+}
+
+.gap-unified {
+  gap: var(--content-spacing-md);
+}
+
